@@ -1,0 +1,11 @@
+KERNEL
+	The core of the OS. 
+	The Linux kernel is what Linus Torvalds originally created. 
+	It acts as a bridge between the applications and the hardware
+SHELL:
+	The Shell is a program that acts as the primary interface between the user and the Linux Kernel (the core of the operating system).
+	 
+PROCESS MANAGEMENT 
+
+    It is the part of linux that creates,schedules,monitors and terminates programs,so the cpu ,memory,and systems resources are used efficiently.
+

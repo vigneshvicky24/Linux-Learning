@@ -7,5 +7,4 @@ SHELL:
 	 
 PROCESS MANAGEMENT 
 
-    It is the part of linux that creates,schedules,monitors and terminates programs,so the cpu ,memory,and systems resources are used efficiently.
-
+    It is the part of linux that creates,schedules,monitors and terminates programs,so the cpu ,memory,and systems resources are used efficiently

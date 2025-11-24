@@ -1,0 +1,10 @@
+Package management handles the installation ,upgrading,configuration and removal of software on the operating system.
+The core of this system is the package manager.
+apt (Advanced Package Tool) - it is distribution family of the debian,ubuntu,mint
+yum (yellowdog Upddater,Modified) - RHEL,CenOs
+dnf (Dandified YUM)- Fedora,RHEL(newer),Centos
+
+
+ENVIRONMENT VARIABLES
+    To use of environment variables ,we can store key value pairs  in the format NAME=value
+    

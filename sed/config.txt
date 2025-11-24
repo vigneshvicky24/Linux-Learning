@@ -1,0 +1,5 @@
+echo "ServerName=dev_web_server" > config.txt
+echo "Port=8080" >> config.txt
+echo "# The following is a test comment" >> config.txt
+echo "MaxConnections=1000" >> config.txt
+echo "UseSSL=false" >> config.txt  

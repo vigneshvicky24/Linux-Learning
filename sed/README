@@ -1,0 +1,13 @@
+sed -stream editor,It is powerful command line tool used to search,find,replace insert ,delete or transform text in automated way.
+To use of sed command,we can edit file without opening into the file
+
+1.Replace text (substitution)
+    sed 's/old text/new text/' <filename>.txt
+    example:
+        sed 's/banana/BANANA/g' fruits.txt   #g means all occurrence of the 
+2.Delete lines
+    sed '/banana/d' fruits.txt   #this command delete every line having the banana word
+    
+    To delete word at particular line 
+        sed '3d' fruits.txt
+        

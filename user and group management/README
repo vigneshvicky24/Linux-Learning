@@ -1,0 +1,23 @@
+User and group management is fundamental to Linux security and access control. Every file, directory, and process is owned by a specific user and a specific group. This system determines who can read, write, or execute resources.
+To create new user 
+    sudo useradd newuser
+
+set or change password to the user
+    sudo passwd <username>
+
+Modifies an exiting user's details (changing their home and directory or adding them to group)
+    sudo usermod -aG sudo <username>
+
+To delete a user account, "-r" option to delete their home directory
+    sudo userdel -r <newuser_name>
+
+To see displays the UID and group membership of a user
+    id <username_name>
+
+
+SUDO 
+
+sudo is short form for the "super user do" allows to permitted user to execute a command as the root user or another user,as defined by the system's security policy.
+(In simple word run this command with the administrative power)
+
+

@@ -1,3 +1,5 @@
+1.INTRODUCTION TO LINUX
+
 KERNEL
 	The core of the OS. 
 	The Linux kernel is what Linus Torvalds originally created. 
@@ -6,5 +8,82 @@ SHELL:
 	The Shell is a program that acts as the primary interface between the user and the Linux Kernel (the core of the operating system).
 	 
 PROCESS MANAGEMENT 
+	It is the part of linux that creates,schedules,monitors and terminates programs,so the cpu ,memory,and systems resources are used efficiently
 
-    It is the part of linux that creates,schedules,monitors and terminates programs,so the cpu ,memory,and systems resources are used efficiently
+
+FILE SYSTEM
+
+Directory,Purpose,Example
+/	Root Directory: The base of the file system.,
+/bin	"Binaries: Essential user command binaries (e.g., ls, cp).",
+/etc	"Configuration Files: System-wide configuration files (e.g., networking settings).",
+/home	"Home Directories: Contains personal files for regular users (e.g., /home/username).",
+/var	"Variable Data: Files whose content is expected to change frequently (e.g., system logs, mail, print queues).",
+/usr	"Unix System Resources: Secondary hierarchy for read-only user data, including applications and libraries.",
+/dev	Devices: Contains special files representing hardware devices.,
+
+
+File/Directory Operations
+	ls-l	List files
+	touch	create the file
+	mkdir	create directory
+	rm -f <filename>.txt	remove file
+	rm <directory name>		remove directory
+	cp <src path> <dest path>	copy file from one path to other path
+	mv <src path> <dest path>	move file from one path to other path
+
+File system metadata
+	df -h	show disk usage
+	mount /dev/sda1 /mnt 	Mount file system
+	umount mnt 		umount /mnt
+	fsck	file system 
+	chmod 755 <filename>.sh		change File permission (4 - read,2-write,1-execute)
+	   |
+	   -->first position is "owner permission",second position "group permission" ,third position "other permission"
+	chown user:group <filename>	change File ownership
+
+
+2.LINUX DISTRIBUTION 
+
+	-Debian - One of the oldest distro. Known for its rock-solid stability, adherence to free software principles, and long release cycles. Package manager is APT
+	-Ubuntu - The most popular desktop and server distro. Built on Debian, it prioritizes user-friendliness, easy installation, and commercial support (from Canonical).
+	-Linux - A highly user-friendly desktop distro based on Ubuntu. Aims for a familiar, elegant, "out-of-the-box" experience with pre-installed media codecs.
+	-CentOS - It is redhat based on (Red Hat Enterprise Linux (RHEL))
+	-Alpine Linux - Extremely lightweight .Uses musl libs instead of glibc.Dominates Docker image.Package manger : apk(alpine package keeper) .alpine mainly used in the containerized the application
+
+3.FILE OPERATIONS
+
+Create:	
+	touch <filename>.txt
+	echo "hello" > test.txt
+	mkdir <directory name>
+
+Read:
+	view or inspect file contents
+		cat <filename>.txt
+		less <filename>.txt
+		head <filename>.txt
+		tail <filename>.txt
+		tail -f <filename>.txt 		//live output show 
+
+Check the file detail
+		ls -l
+		stat README
+
+locate files
+		find ./ -name <fiename>.txt
+
+
+grep - used for search text inside files
+	grep "<search command to text>" <filename>.txt
+	grep -i <filename>.txt (ignore case)
+	grep -r "pattern" </path/to/> (recursive)
+This is a must-have for log analysis
+
+
+find - Search for files based on name, size, type, etc.
+	find / -name "<filename>.txt
+	find . -type f -size + 10M 
+	find . -type d -name <directory_name>
+
+awk- Pattern-based text processing + column extraction.

@@ -1,0 +1,9 @@
+ip addr - view ip addresses
+ip route -  view routing table
+netstat -  show active connections,routing tables,interface statistics,multicast memberships.
+ss - socket statistics (It is faster and powerful than netstat)
+ping - test connectivity to another host
+traceroute - show the route packets take to a network host  
+curl - transfer data from or to a server (eg: curl http://example.com ...it retrieves the content of the webpage)
+scp - secure copy files between hosts on a network  (scp source_file user@remote_host:destination_path)
+ssh - secure shell to remotely access another machine (ssh user@remote_host) 

@@ -5,6 +5,3 @@ yum (yellowdog Upddater,Modified) - RHEL,CenOs
 dnf (Dandified YUM)- Fedora,RHEL(newer),Centos
 
 
-ENVIRONMENT VARIABLES
-    To use of environment variables ,we can store key value pairs  in the format NAME=value
-    

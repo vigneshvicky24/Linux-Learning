@@ -1,0 +1,43 @@
+cron job - automatically scheduled task on a computer
+cron jobs are used to run tasks on a schedule (every minutes,hour,day,week and month)
+cron job automate repetitive work ,such as 
+    backing up files
+    cleaning temporary files
+    sending emails
+    updating database
+    running scripts
+
+
+create the cron jobs    
+    crontab -e
+
+add a cron job
+    * * * * * command
+    | | | | |
+    | | | | day of the week (0-6)
+    | | | Month(1-12)
+    | | day of the month(1-31)
+    | Hour
+   minutes
+   
+
+example:
+    */5 * * * * /home/user/myscript.sh          ##it runs the every 5 minutes
+    0 10 * * 1 /home/user/myscript.sh           ## It rune every monday 10AM
+
+
+
+To check the cron jobs are saved
+    crontab -l
+
+To status cron job is running or not 
+    systemctl status cron
+
+To see output of the running cron job
+    cat <path>
+
+To delete all cron jobs  for your user at once
+    crontab -r
+
+To check the cron log 
+    grep CRON /var/log/syslog

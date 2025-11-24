@@ -1,0 +1,98 @@
+ENVIRONMENT VARIABLES
+    To use of environment variables ,we can store key value pairs  in the format NAME=value
+
+    To see environment path using like the commands "env" or "printenv"
+    Temporary set the environment variable using the "export my_var="hello"
+
+
+SHELL SCRIPTING
+    It is sequence of linux commands that run one after another.
+
+    shell scripting file start with the line 
+        #!/bin/bash
+
+    To execute the shell script file 
+        chmod +x <filename>.sh
+        ./<filename>.sh
+    
+    variable:
+        name="vignesh"
+
+    Input and Arguments
+        read username
+        //to read the message with input 
+            read -p "Enter the message" username
+    
+    If condition
+
+        if [ condition ];then
+            commands
+        elif [ condition ];then
+            commands
+        else
+            commands
+        fi
+
+    looping
+        for loop
+            for var in 1 2 3 4 5; do
+                echo $var
+            done
+
+        while loop
+            count=1
+            while [ $count -le 5 ]; do
+                echo $count
+                ((count++))
+            done
+
+
+    Functions
+        greet() {
+        echo "Hi $1"
+        }
+
+    greet "Vignesh"
+
+Exit status:
+    if [$? -eq 0]; then
+        echo "success"
+    else
+        echo "failed"
+    fi
+
+******************************************************************************************
+
+LOG FILES
+    log files are files that store system events and messages.
+    Common log files in Linux are located in the /var/log directory.
+
+    Some important log files:
+        /var/log/syslog - General system log file
+        /var/log/auth.log - Authentication logs
+        /var/log/kern.log - Kernel logs
+        /var/log/dmesg - Boot and hardware-related messages
+
+    To view log files, you can use commands like:
+        cat /var/log/syslog
+        tail -f /var/log/auth.log
+        less /var/log/kern.log
+
+    You can also use tools like "journalctl" to view systemd logs:
+        journalctl -xe
+
+
+******************************************************************************************
+TROUBLESHOOTING:
+Troubleshooting is the systematic process of identifying the cause of a problem or failure and implementing a solution.
+    Common troubleshooting steps in Linux:
+        1. Check system logs for errors.
+        2. Verify network connectivity using ping or traceroute.
+        3. Check disk space using df -h.
+        4. Monitor system resources using top or htop.
+        5. Restart services using systemctl restart <service_name>.
+        6. Use strace to trace system calls and signals.
+        7. Check for package updates and reinstall if necessary.
+
+    Always refer to official documentation and community forums for specific issues.
+

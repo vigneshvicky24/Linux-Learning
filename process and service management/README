@@ -1,0 +1,24 @@
+Process and service management is how Linux handles all the programs running on the system and the foundational services that keep the OS operational.
+
+Process is an instance of running program.Eery process is tracked by the kernel and has a unique process ID (PID)
+ps-Process Snapshot
+    Show all processes with detailed info
+
+top - real time view of system performance,showing processes sorted by the cpu usage
+kill - send signal to a process,typically used to terminate it. (kill -15 <pid> means gracefully ,kill -9 <pid> means forcefully kill)
+killall - Kills all processes matching specific name 
+niche/renice - Adjust priority nice used to set priority in the process,renice modifies the scheduling priority of the process.Lower niche means the higher priority
+
+
+
+SERVICE MANAGEMENT 
+    services are long running ,no interactive processes (like a web server or a database) that often start automatically at boot.
+        systemctl status
+        systemctl start
+        systemctl stop
+        systemctl restart
+        systemctl enable (enable at boot)
+        systemctl disable (disable at boot )
+        systemctl list-units --type=service (to list all the services in the system)
+
+        

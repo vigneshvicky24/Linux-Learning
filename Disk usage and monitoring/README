@@ -1,0 +1,10 @@
+Disk Usage and System Monitoring refers to the set of tools and practices used to observe the resource consumption and operational health of a Linux system.
+
+df (disk free) - report the amount of the disk space used and available on mounted filesystem.It's used for checking overall partition capacity
+du (disk usage) - This command estimates the file space usage of a specific directory or file.it's used for locating where space is being consumed within a partition.
+free - it display the total amount of the free and used physical and swap memory in the system ,along with the buffers and caches by the kernel.
+uptime - it shows the overall operational status of the system
+    The current time
+    The time the system has been running since the last reboot (uptime).
+    The average system load over the last 1, 5, and 15 minutes (a measure of how many processes are waiting for CPU time).
+
